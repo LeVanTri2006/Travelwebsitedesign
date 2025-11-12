@@ -8,9 +8,15 @@ import { TicketsPage } from './components/TicketsPage';
 import { FlightsPage } from './components/FlightsPage';
 import { ContactPage } from './components/ContactPage';
 import { AuthPage } from './components/AuthPage';
+import { AdminApp } from './components/AdminApp';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
+
+  // Check if we're in admin mode
+  if (currentPage === 'admin') {
+    return <AdminApp />;
+  }
 
   const renderPage = () => {
     switch (currentPage) {

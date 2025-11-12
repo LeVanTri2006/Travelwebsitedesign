@@ -63,6 +63,14 @@ export function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
             >
               Đăng nhập / Đăng ký
             </button>
+            {/* Admin Access - Hidden button for demo */}
+            <button
+              onClick={() => handleNavClick('admin')}
+              className="text-xs text-gray-400 hover:text-[#0f4c81] transition-colors"
+              title="Admin Dashboard"
+            >
+              Admin
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
